@@ -1,0 +1,1 @@
+../procdefs-32MX220F032D-pinguino-usb-boot.ld
