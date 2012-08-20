@@ -1,0 +1,3 @@
+[submodule "flauschlib"]
+	path = flauschlib
+	url = http://github.com/hwhw/flauschlib.git
