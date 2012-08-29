@@ -40,12 +40,19 @@ int main (void) {
 
 	spi_sd_init();
 
-	delay100usec(30000);
-
-	unsigned int stat = disk_initialize();
-	uart_puthex(stat);
-	uart_puts("\r\n");
-
+	int counter = 0;
+//while(1) { mLED_1_Toggle(); }
 	while(1) {
+		uart_puts("Run ");
+		uart_puthex(counter++);
+		uart_puts("\r\n");
+
+		delay100usec(30000);
+
+		mLED_1_Toggle();
+		unsigned int stat = disk_initialize();
+
+		uart_puthex(stat);
+		uart_puts("\r\n");
 	}
 }
