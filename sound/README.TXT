@@ -1,0 +1,1 @@
+Anbindung einer SD-Card
