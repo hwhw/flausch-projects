@@ -26,7 +26,7 @@ AR      = xc32-ar
 APPLIB_PATH = $(HOME)/devel/pinguino/applibs/Microchip
 
 # Our own library, relative to the project path
-FLAUSCHLIB_PATH = ../flauschlib
+FLAUSCHLIB_PATH = ../../flauschlib
 
 # compiler config
 OPTIMIZE ?= -Os -mips16e
