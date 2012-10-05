@@ -1,11 +1,13 @@
 Sound-Ausgabe
 
-Benutzt derzeit eine Samplerate von ca. 19531 Hz
+Benutzt derzeit eine Samplerate von ca. 132300 Hz
 
 Konversion zB:
 
-$ sox input.wav -r19531 -c1 -b8 output-8bit-1channel-19500Hz.wav
+$ sox input.wav -r132300 -c1 -b8 output-8bit-1channel-132300Hz.wav
 
-Achtung: Zum füttern via UART sollte die Flauschlib OHNE Interrupt-unterstützten UART kompiliert sein (obwohl, vermutlich funktioniert es auch mit, ist nur ziemlich umständlich, weil das Senden eh irrelevant ist).
+Die Daten werden von einer an UEXT angeschlossenen SD-Karte gelesen.
+Der Offset der Daten, die dort am Stück liegen müssen (unfragmentiert),
+ist als Konstante in der main.c definiert (als 512-Byte-Block-Count).
 
-Zum Füttern der Daten ist im Verzeichnis "host" ein kleines Programm, das den entsprechenden Handshake versteht.
+Abgespielt wird, bis die SD-Karte nichts mehr liefert...
