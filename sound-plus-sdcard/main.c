@@ -38,7 +38,7 @@ int main (void) {
 
 	uart_init_highspeed();
 
-	PR2 = 301; // 2048 @ 40MHz = ca 19531 Hz
+	PR2 = 301; // 302 @ 40MHz = ca 132300 Hz (=44100*3)
 	T2CON = 0x8000; // enable, prescaler=1/1
 
 	IPC2bits.T2IP = 4;
